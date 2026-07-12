@@ -4,19 +4,16 @@
     "framework": null,
     "installCommand": "npm ci",
     "buildCommand": "npm run build",
-    "outputDirectory": "dist",
+    "outputDirectory": "public",
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.6.2"
         }
     },
-    "routes": [
+    "rewrites": [
         {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
+            "source": "/(.*)",
+            "destination": "/api/index.php"
         }
     ]
 }
