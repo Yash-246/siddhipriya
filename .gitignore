@@ -7,6 +7,8 @@
 .env.*
 !.env.example
 
+/dist
+
 .phpactor.json
 .phpunit.result.cache
 
